@@ -25,7 +25,10 @@ func main() {
 
 	var people []person
 
-	json.Unmarshal(bs, &people)
+	err = json.Unmarshal(bs, &people)
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Println(people)
 
 }
