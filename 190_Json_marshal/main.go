@@ -23,7 +23,7 @@ func main() {
 	}
 	fmt.Println(string(bs))
 
-	people := []person{}
+	var people []person
 
 	json.Unmarshal(bs, &people)
 	fmt.Println(people)
